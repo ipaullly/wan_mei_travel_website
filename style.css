@@ -130,7 +130,7 @@ html, body {
   background-image: url('./images/safari_tours.jpg');
 }
 .offer_container > .offer-row > .card-offer:nth-child(3) {
-  background-image: url('./images/hashim-mbita-GG-JAveq-4U-unsplash.svg');
+  background-image: url('./images/banner.jpg');
 }
 .offer_container > .offer-row > .card-offer:nth-child(4) {
   background-image: url('./images/hotel_booking.jpg');
@@ -224,9 +224,10 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('./images/hashim-mbita-GG-JAveq-4U-unsplash.svg');
+  background-image: url('./images/banner.jpg');
   background-position: center;
   background-size: cover;
+  padding: 50px;
   background-attachment: fixed; /* Or scroll for CSS parallax */
   z-index: -3; /* Ensure it's behind the text */
   opacity: 0;
@@ -242,7 +243,11 @@ html, body {
   z-index: 1;
   color: white;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.413);
   padding: 50px;
+  width: 50%;
+  margin: auto auto;
+  border-radius: 15px;
   font-size: 1.75rem;
 }
 .top_section img {
