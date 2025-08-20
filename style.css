@@ -19,7 +19,7 @@ html, body {
   height: auto;
 }
 .background-intro-image {
-  background-image: url('/images/nairobi.jpg');
+  background-image: url('./images/nairobi.jpg');
   min-width: 40%;
   height: 400px;
   background-size: cover;
@@ -58,7 +58,7 @@ html, body {
   margin-bottom: 30px;
 }
 .background-pattern-image {
-  background-image: url('/images/tribe_pattern.jpg');
+  background-image: url('./images/tribe_pattern.jpg');
   min-width: 300px;
   height: 300px;
   margin-left: -40px;
@@ -66,7 +66,7 @@ html, body {
 }
 
 .background-car-image {
-  background-image: url('/images/nairobi.jpg');
+  background-image: url('./images/nairobi.jpg');
   top: 0;
   left: 0;
   width: 100%;
@@ -76,7 +76,7 @@ html, body {
 }
 
 .background-offer-image {
-  background-image: url('/images/offer_pattern.jpg');
+  background-image: url('./images/offer_pattern.jpg');
   z-index: -1;
   opacity: 0.8;
   top: 0;
@@ -267,7 +267,7 @@ html, body {
 .footer_col {
   display: flex;
   flex-direction: column;
-  
+
 }
 
 .footer_col > span {
