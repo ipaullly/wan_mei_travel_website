@@ -1,0 +1,327 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+* {
+  font-family: "Cardo", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.nav {
+  background: transparent;
+  position: absolute;
+  top: 0;
+}
+.nav_logo {
+  max-width: 80px;
+  height: auto;
+}
+.background-intro-image {
+  background-image: url('/images/nairobi.jpg');
+  min-width: 40%;
+  height: 400px;
+  background-size: cover;
+  margin-right: -40px;
+}
+
+.introduction {
+  background-color: #f6d7a2;
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+}
+.car-container > .box_shadow_effect {
+  z-index: 3;
+  width: 400px;
+  height: 500px;
+  background-color: whitesmoke;
+  padding: 20px;
+  letter-spacing: 2px;
+  font-size: 1.15rem;
+  margin-bottom: 30px;
+}
+
+.introduction > p {
+  z-index: 3;
+  width: 400px;
+  height: 400px;
+  background-color: whitesmoke;
+  padding: 20px;
+  letter-spacing: 2px;
+  font-size: 1.15rem;
+  margin-bottom: 30px;
+}
+.background-pattern-image {
+  background-image: url('/images/tribe_pattern.jpg');
+  min-width: 300px;
+  height: 300px;
+  margin-left: -40px;
+  background-size: cover;
+}
+
+.background-car-image {
+  background-image: url('/images/nairobi.jpg');
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.background-offer-image {
+  background-image: url('/images/offer_pattern.jpg');
+  z-index: -1;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.car-container > .box_shadow_effect {
+  position: absolute;
+  left: 5%;
+  top: 30%;
+}
+
+.offer_container > h2 {
+  position: absolute;
+  z-index: 3;
+  left: 40%;
+  top: 10%;
+  color: rgb(34, 33, 33);
+  font-weight: 800;
+}
+
+.offer_container > .offer-row {
+  position: absolute;
+  z-index: 3;
+  left: 5%;
+  top: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+.offer_container > .offer-row > .card-offer {
+  text-align: center;
+  height: 500px;
+  background-image: url('/images/car_hire.jpg');
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.offer_container > .offer-row > .card-offer:nth-child(2) {
+  background-image: url('/images/safari_tours.jpg');
+}
+.offer_container > .offer-row > .card-offer:nth-child(3) {
+  background-image: url('/images/hashim-mbita-GG-JAveq-4U-unsplash.jpg');
+}
+.offer_container > .offer-row > .card-offer:nth-child(4) {
+  background-image: url('/images/hotel_booking.jpg');
+}
+
+
+.offer_container > .offer-row > .card-offer > .card-title {
+  margin-top: 20px;
+}
+
+.offer_container > .offer-row > .card-offer > .card-btn,
+.contact_container > .card-btn,
+.socials_container > .card-btn {
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 2px orange solid;
+  background-color: transparent;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.socials_container > .card-btn {
+  color: black;
+}
+.offer_container > .offer-row > .card-offer > .card-btn:hover,
+.contact_container > .card-btn:hover,
+.socials_container > .card-btn:hover {
+  color: black;
+  background-color: rgba(245, 245, 245, 0.582);
+  transform: scale(1.1);
+}
+
+.location_container {
+  padding: auto 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #f1d8ba;
+}
+
+.location_container > div > p {
+    letter-spacing: 2px;
+  font-size: 1.15rem;
+}
+
+.location_container > div > h1,
+.contact_container > h1 {
+    letter-spacing: 2px;
+  font-size: 3.75rem;
+  padding-bottom: 30px;
+}
+
+.socials_container { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.contact_container { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-image: url('/images/contact_pattern.jpg');
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+.car-container,
+.parallax-container,
+.offer_container,
+.location_container,
+.contact_container,
+.socials_container {
+  position: relative;
+  height: 100vh; 
+  overflow: hidden;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/hashim-mbita-GG-JAveq-4U-unsplash.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; /* Or scroll for CSS parallax */
+  z-index: -3; /* Ensure it's behind the text */
+  opacity: 0;
+  animation: fadeZoom 4s ease-in-out forwards;
+}
+.box_shadow_effect {
+  box-shadow: 0px 1px 5px 4px rgba(0,0,0,0.33);
+  -webkit-box-shadow: 0px 1px 5px 4px rgba(0,0,0,0.33);
+  -moz-box-shadow: 0px 1px 5px 4px rgba(0,0,0,0.33);
+}
+.text-overlay {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding: 50px;
+  font-size: 1.75rem;
+}
+.top_section img {
+  width: 100px;
+  max-height: 70px;
+}
+
+.footer_style {
+  width: 100%;
+  background-color: rgb(3, 3, 42);
+  color: white;
+  padding: 100px 50px;
+}
+
+.footer_style .copyright {
+  width: 100%;
+  background-color: rgb(3, 3, 42);
+  color: white;
+  padding-top: 100px;
+}
+
+.footer_col {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.footer_col > span {
+  color: orange;
+  font-weight: 700;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 8 columns */
+  gap: 10px; /* space between images */
+  max-width: 90%;
+  padding: 10px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.image-grid img:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* 🔹 Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .image-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-grid {
+    grid-template-columns: 1fr; /* stack images */
+  }
+}
+
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.1); /* slight zoom in */
+  }
+}
