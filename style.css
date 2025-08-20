@@ -116,7 +116,7 @@ html, body {
 .offer_container > .offer-row > .card-offer {
   text-align: center;
   height: 500px;
-  background-image: url('/images/car_hire.jpg');
+  background-image: url('./images/car_hire.jpg');
   width: 100%;
   background-position: center;
   background-size: cover;
@@ -127,13 +127,13 @@ html, body {
 }
 
 .offer_container > .offer-row > .card-offer:nth-child(2) {
-  background-image: url('/images/safari_tours.jpg');
+  background-image: url('./images/safari_tours.jpg');
 }
 .offer_container > .offer-row > .card-offer:nth-child(3) {
-  background-image: url('/images/hashim-mbita-GG-JAveq-4U-unsplash.jpg');
+  background-image: url('./images/hashim-mbita-GG-JAveq-4U-unsplash.svg');
 }
 .offer_container > .offer-row > .card-offer:nth-child(4) {
-  background-image: url('/images/hotel_booking.jpg');
+  background-image: url('./images/hotel_booking.jpg');
 }
 
 
@@ -199,7 +199,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-image: url('/images/contact_pattern.jpg');
+  background-image: url('./images/contact_pattern.jpg');
   width: 100%;
   height: 100%;
   background-position: center;
@@ -224,7 +224,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/images/hashim-mbita-GG-JAveq-4U-unsplash.jpg');
+  background-image: url('./images/hashim-mbita-GG-JAveq-4U-unsplash.svg');
   background-position: center;
   background-size: cover;
   background-attachment: fixed; /* Or scroll for CSS parallax */
