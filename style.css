@@ -341,12 +341,40 @@ html, body {
 @media (max-width: 768px) {
   .image-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    gap: 8px;
+  }
+  
+  .socials_container {
+    padding: 40px 20px;
+  }
+  
+  .contact_container {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .contact_container > img {
+    width: 60% !important;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .image-grid {
     grid-template-columns: 1fr; /* stack images */
+    gap: 5px;
+  }
+  
+  .socials_container {
+    padding: 30px 15px;
+  }
+  
+  .contact_container {
+    padding: 30px 15px;
+  }
+  
+  .contact_container > img {
+    width: 80% !important;
   }
 }
 
@@ -1302,6 +1330,84 @@ round pattern for packages content */
   }
 }
 
+/* Responsive design for home page offer cards */
+@media (max-width: 1200px) {
+  .offer_container > .offer-row {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    position: static;
+    padding: 20px;
+  }
+  
+  .offer_container > .offer-row > .card-offer {
+    width: 80% !important;
+    margin-bottom: 20px;
+    height: 300px;
+  }
+  
+  .offer_container > h2 {
+    position: static;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .offer_container > .offer-row > .card-offer {
+    width: 95% !important;
+    height: 250px;
+  }
+  
+  .offer_container {
+    padding: 40px 20px;
+  }
+  
+  .location_container {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .location_container > img {
+    width: 80% !important;
+    margin-bottom: 20px;
+  }
+  
+  .location_container > div {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .offer_container > .offer-row > .card-offer {
+    width: 100% !important;
+    height: 200px;
+  }
+  
+  .text-overlay {
+    width: 95% !important;
+    padding: 20px !important;
+    font-size: 1.2rem !important;
+  }
+  
+  .text-overlay h1 {
+    font-size: 2rem;
+  }
+  
+  .location_container > div > h1,
+  .contact_container > h1 {
+    font-size: 2.5rem;
+  }
+  
+  .introduction > p,
+  .car-container > .box_shadow_effect {
+    width: 95%;
+    padding: 15px;
+    font-size: 1rem;
+  }
+}
+
 /* Universal responsive classes for all pages */
 @media (max-width: 1200px) {
   .page-packages .text-overlay,
@@ -1350,5 +1456,25 @@ round pattern for packages content */
   .page-about .location-contact,
   .page-about .contact-info {
     margin-bottom: 30px;
+  }
+  
+  /* Footer responsive improvements */
+  .footer_style {
+    padding: 50px 20px;
+  }
+  
+  .footer_style > div:first-child {
+    flex-direction: column !important;
+    width: 100% !important;
+    text-align: center;
+  }
+  
+  .footer_col {
+    margin-bottom: 30px;
+    align-items: center;
+  }
+  
+  .footer_style .copyright {
+    padding-top: 30px;
   }
 }

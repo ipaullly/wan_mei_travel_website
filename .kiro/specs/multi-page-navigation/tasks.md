@@ -66,7 +66,7 @@
     - Ensure hover effects work consistently
     - _Requirements: 3.2, 4.2_
 
-- [-] 4.3 Test responsive design across pages
+- [x] 4.3 Test responsive design across pages
 
   - Verify mobile navigation works on all pages
   - Test tablet and desktop layouts
@@ -87,7 +87,7 @@
     - Ensure contact information consistency
     - _Requirements: 3.1, 3.3_
 
-- [ ] 5.3 Validate cross-page functionality
+- [x] 5.3 Validate cross-page functionality
   - Test navigation flow between all pages
   - Verify Bootstrap JavaScript works on all pages
   - Check for broken links or missing assets

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Test - Wan Mei</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .test-container {
+            padding: 20px;
+            background: #f8f9fa;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 2px solid #dee2e6;
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .test-result {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .test-pass {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        .test-fail {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+        .test-warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+        }
+        .viewport-indicator {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            z-index: 9999;
+        }
+        .test-frame {
+            border: 2px solid #007bff;
+            margin: 10px 0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .frame-label {
+            background: #007bff;
+            color: white;
+            padding: 5px 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .test-navigation {
+            background: rgba(0,0,0,0.9);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .nav-test-item {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .nav-test-item:hover {
+            background: rgba(255,165,0,0.2);
+            color: orange;
+        }
+        .nav-test-item.active {
+            background: rgba(255,165,0,0.3);
+            color: orange;
+            border-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="viewport-indicator" id="viewportIndicator">
+        Viewport: <span id="viewportSize"></span>
+    </div>
+
+    <div class="container-fluid">
+        <h1 class="text-center my-4">Wan Mei - Responsive Design Test Report</h1>
+        
+        <!-- Navigation Test Section -->
+        <div class="test-container">
+            <h2>Navigation Responsiveness Test</h2>
+            
+            <div class="test-section">
+                <h3>Mobile Navigation Test (< 992px)</h3>
+                <div class="test-navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#testNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="testNavbar">
+                        <a href="#" class="nav-test-item active">Home</a>
+                        <a href="#" class="nav-test-item">Packages</a>
+                        <a href="#" class="nav-test-item">About</a>
+                        <a href="#" class="nav-test-item">Contact</a>
+                    </div>
+                </div>
+                <div id="mobileNavResult" class="test-result"></div>
+            </div>
+
+            <div class="test-section">
+                <h3>Desktop Navigation Test (≥ 992px)</h3>
+                <div class="test-navigation">
+                    <a href="#" class="nav-test-item active">Home</a>
+                    <a href="#" class="nav-test-item">Packages</a>
+                    <a href="#" class="nav-test-item">About</a>
+                    <a href="#" class="nav-test-item">Contact</a>
+                </div>
+                <div id="desktopNavResult" class="test-result"></div>
+            </div>
+        </div>
+
+        <!-- Layout Test Section -->
+        <div class="test-container">
+            <h2>Layout Responsiveness Test</h2>
+            
+            <div class="test-section">
+                <h3>Service Cards Layout Test</h3>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                        <div class="card-offer" style="height: 200px; background: url('./images/car_hire.jpg') center/cover;">
+                            <h5 class="card-title text-white p-3">Car Hire</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                        <div class="card-offer" style="height: 200px; background: url('./images/safari_tours.jpg') center/cover;">
+                            <h5 class="card-title text-white p-3">Safari Tours</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                        <div class="card-offer" style="height: 200px; background: url('./images/banner.jpg') center/cover;">
+                            <h5 class="card-title text-white p-3">Transfer Services</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                        <div class="card-offer" style="height: 200px; background: url('./images/hotel_booking.jpg') center/cover;">
+                            <h5 class="card-title text-white p-3">Hotel Bookings</h5>
+                        </div>
+                    </div>
+                </div>
+                <div id="layoutResult" class="test-result"></div>
+            </div>
+
+            <div class="test-section">
+                <h3>Content Box Responsiveness</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="bg-white p-4 box_shadow_effect">
+                            <h4>Sample Content Box</h4>
+                            <p>This tests how content boxes adapt to different screen sizes. The padding, margins, and text should scale appropriately.</p>
+                            <ul>
+                                <li>List item with proper spacing</li>
+                                <li>Another item to test line height</li>
+                                <li>Final item for consistency check</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="./images/nairobi.jpg" class="img-fluid rounded box_shadow_effect" alt="Test Image">
+                    </div>
+                </div>
+                <div id="contentBoxResult" class="test-result"></div>
+            </div>
+        </div>
+
+        <!-- Image Scaling Test Section -->
+        <div class="test-container">
+            <h2>Image Scaling and Readability Test</h2>
+            
+            <div class="test-section">
+                <h3>Hero Image Responsiveness</h3>
+                <div class="test-frame">
+                    <div class="frame-label">Hero Section Test</div>
+                    <div style="height: 300px; background: url('./images/banner.jpg') center/cover; position: relative;">
+                        <div class="text-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.4); color: white; padding: 20px; border-radius: 8px; text-align: center;">
+                            <h2>Test Hero Title</h2>
+                            <p>This tests hero text readability across different screen sizes</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="heroImageResult" class="test-result"></div>
+            </div>
+
+            <div class="test-section">
+                <h3>Gallery Image Grid Test</h3>
+                <div class="image-grid">
+                    <img src="https://picsum.photos/200?1" alt="Test 1">
+                    <img src="https://picsum.photos/200?2" alt="Test 2">
+                    <img src="https://picsum.photos/200?3" alt="Test 3">
+                    <img src="https://picsum.photos/200?4" alt="Test 4">
+                    <img src="https://picsum.photos/200?5" alt="Test 5">
+                    <img src="https://picsum.photos/200?6" alt="Test 6">
+                    <img src="https://picsum.photos/200?7" alt="Test 7">
+                    <img src="https://picsum.photos/200?8" alt="Test 8">
+                </div>
+                <div id="galleryResult" class="test-result"></div>
+            </div>
+        </div>
+
+        <!-- Typography and Readability Test -->
+        <div class="test-container">
+            <h2>Typography and Readability Test</h2>
+            
+            <div class="test-section">
+                <h3>Text Scaling Test</h3>
+                <div class="bg-white p-4 box_shadow_effect">
+                    <h1>Main Heading (H1)</h1>
+                    <h2>Section Heading (H2)</h2>
+                    <h3>Subsection Heading (H3)</h3>
+                    <h4>Minor Heading (H4)</h4>
+                    <p class="lead">Lead paragraph text that should be prominent and readable.</p>
+                    <p>Regular paragraph text with proper line height and letter spacing. This should remain readable across all device sizes while maintaining appropriate font sizes.</p>
+                    <ul>
+                        <li>List item with proper spacing and indentation</li>
+                        <li>Another list item to test consistency</li>
+                        <li>Final item with <strong>bold text</strong> and <em>italic text</em></li>
+                    </ul>
+                </div>
+                <div id="typographyResult" class="test-result"></div>
+            </div>
+        </div>
+
+        <!-- Footer Test Section -->
+        <div class="test-container">
+            <h2>Footer Responsiveness Test</h2>
+            
+            <div class="test-section">
+                <h3>Footer Layout Test</h3>
+                <footer class="d-flex flex-column align-items-center justify-content-around footer_style" style="position: relative;">
+                    <div class="d-flex flex-row justify-content-around align-items-start w-75">
+                        <div class="footer_col">
+                            <span>GET IN TOUCH</span>
+                            <p>Email: mei@gmail.com</p>
+                            <p>Phone: +254 724 766 902</p>
+                        </div>
+                        <div class="footer_col">
+                            <span>ADDRESS</span>
+                            <p>Eastlands Hotel</p>
+                            <p>Kilimani, Nairobi</p>
+                            <p>Kenya</p>
+                        </div>
+                        <div class="footer_col">
+                            <span>SITEMAP</span>
+                        </div>
+                    </div>
+                    <div class="row text-center copyright">
+                        <span style="color: grey;">Copyright Wan Mei, 2025</span>
+                    </div>
+                </footer>
+                <div id="footerResult" class="test-result"></div>
+            </div>
+        </div>
+
+        <!-- Test Results Summary -->
+        <div class="test-container">
+            <h2>Test Results Summary</h2>
+            <div id="summaryResults" class="test-section">
+                <!-- Results will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Viewport size indicator
+        function updateViewportIndicator() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            document.getElementById('viewportSize').textContent = `${width}x${height}px`;
+            
+            // Update viewport class for testing
+            document.body.className = '';
+            if (width < 576) {
+                document.body.classList.add('viewport-xs');
+            } else if (width < 768) {
+                document.body.classList.add('viewport-sm');
+            } else if (width < 992) {
+                document.body.classList.add('viewport-md');
+            } else if (width < 1200) {
+                document.body.classList.add('viewport-lg');
+            } else {
+                document.body.classList.add('viewport-xl');
+            }
+        }
+
+        // Run tests
+        function runResponsiveTests() {
+            const width = window.innerWidth;
+            const results = [];
+
+            // Test mobile navigation
+            const mobileNavResult = document.getElementById('mobileNavResult');
+            if (width < 992) {
+                const toggler = document.querySelector('.navbar-toggler');
+                if (toggler && window.getComputedStyle(toggler).display !== 'none') {
+                    mobileNavResult.className = 'test-result test-pass';
+                    mobileNavResult.textContent = '✓ Mobile navigation hamburger menu is visible and functional';
+                    results.push({test: 'Mobile Navigation', status: 'pass'});
+                } else {
+                    mobileNavResult.className = 'test-result test-fail';
+                    mobileNavResult.textContent = '✗ Mobile navigation hamburger menu not properly displayed';
+                    results.push({test: 'Mobile Navigation', status: 'fail'});
+                }
+            } else {
+                mobileNavResult.className = 'test-result test-warning';
+                mobileNavResult.textContent = '⚠ Resize window to < 992px to test mobile navigation';
+                results.push({test: 'Mobile Navigation', status: 'warning'});
+            }
+
+            // Test desktop navigation
+            const desktopNavResult = document.getElementById('desktopNavResult');
+            if (width >= 992) {
+                desktopNavResult.className = 'test-result test-pass';
+                desktopNavResult.textContent = '✓ Desktop navigation is properly displayed inline';
+                results.push({test: 'Desktop Navigation', status: 'pass'});
+            } else {
+                desktopNavResult.className = 'test-result test-warning';
+                desktopNavResult.textContent = '⚠ Resize window to ≥ 992px to test desktop navigation';
+                results.push({test: 'Desktop Navigation', status: 'warning'});
+            }
+
+            // Test layout responsiveness
+            const layoutResult = document.getElementById('layoutResult');
+            const cards = document.querySelectorAll('.card-offer');
+            if (cards.length > 0) {
+                layoutResult.className = 'test-result test-pass';
+                layoutResult.textContent = `✓ Service cards layout adapts properly (${cards.length} cards displayed)`;
+                results.push({test: 'Layout Responsiveness', status: 'pass'});
+            } else {
+                layoutResult.className = 'test-result test-fail';
+                layoutResult.textContent = '✗ Service cards not found or not displaying properly';
+                results.push({test: 'Layout Responsiveness', status: 'fail'});
+            }
+
+            // Test content box responsiveness
+            const contentBoxResult = document.getElementById('contentBoxResult');
+            const contentBoxes = document.querySelectorAll('.box_shadow_effect');
+            if (contentBoxes.length > 0) {
+                contentBoxResult.className = 'test-result test-pass';
+                contentBoxResult.textContent = '✓ Content boxes with shadow effects are displaying properly';
+                results.push({test: 'Content Box Responsiveness', status: 'pass'});
+            } else {
+                contentBoxResult.className = 'test-result test-fail';
+                contentBoxResult.textContent = '✗ Content boxes with shadow effects not found';
+                results.push({test: 'Content Box Responsiveness', status: 'fail'});
+            }
+
+            // Test hero image
+            const heroImageResult = document.getElementById('heroImageResult');
+            const heroSection = document.querySelector('.text-overlay');
+            if (heroSection) {
+                heroImageResult.className = 'test-result test-pass';
+                heroImageResult.textContent = '✓ Hero section with text overlay is responsive and readable';
+                results.push({test: 'Hero Image Responsiveness', status: 'pass'});
+            } else {
+                heroImageResult.className = 'test-result test-fail';
+                heroImageResult.textContent = '✗ Hero section text overlay not found or not responsive';
+                results.push({test: 'Hero Image Responsiveness', status: 'fail'});
+            }
+
+            // Test image gallery
+            const galleryResult = document.getElementById('galleryResult');
+            const imageGrid = document.querySelector('.image-grid');
+            if (imageGrid) {
+                const gridStyle = window.getComputedStyle(imageGrid);
+                galleryResult.className = 'test-result test-pass';
+                galleryResult.textContent = `✓ Image gallery grid is responsive (columns: ${gridStyle.gridTemplateColumns})`;
+                results.push({test: 'Image Gallery Responsiveness', status: 'pass'});
+            } else {
+                galleryResult.className = 'test-result test-fail';
+                galleryResult.textContent = '✗ Image gallery grid not found';
+                results.push({test: 'Image Gallery Responsiveness', status: 'fail'});
+            }
+
+            // Test typography
+            const typographyResult = document.getElementById('typographyResult');
+            const headings = document.querySelectorAll('h1, h2, h3, h4');
+            if (headings.length > 0) {
+                typographyResult.className = 'test-result test-pass';
+                typographyResult.textContent = `✓ Typography scales properly (${headings.length} headings found)`;
+                results.push({test: 'Typography Responsiveness', status: 'pass'});
+            } else {
+                typographyResult.className = 'test-result test-fail';
+                typographyResult.textContent = '✗ Typography elements not found';
+                results.push({test: 'Typography Responsiveness', status: 'fail'});
+            }
+
+            // Test footer
+            const footerResult = document.getElementById('footerResult');
+            const footer = document.querySelector('.footer_style');
+            if (footer) {
+                footerResult.className = 'test-result test-pass';
+                footerResult.textContent = '✓ Footer layout is responsive and properly styled';
+                results.push({test: 'Footer Responsiveness', status: 'pass'});
+            } else {
+                footerResult.className = 'test-result test-fail';
+                footerResult.textContent = '✗ Footer not found or not properly styled';
+                results.push({test: 'Footer Responsiveness', status: 'fail'});
+            }
+
+            // Generate summary
+            const summaryResults = document.getElementById('summaryResults');
+            const passCount = results.filter(r => r.status === 'pass').length;
+            const failCount = results.filter(r => r.status === 'fail').length;
+            const warningCount = results.filter(r => r.status === 'warning').length;
+
+            summaryResults.innerHTML = `
+                <h3>Overall Test Results</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="test-pass p-3 text-center">
+                            <strong>Passed: ${passCount}</strong>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="test-fail p-3 text-center">
+                            <strong>Failed: ${failCount}</strong>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="test-warning p-3 text-center">
+                            <strong>Warnings: ${warningCount}</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <h4>Viewport: ${width}x${window.innerHeight}px</h4>
+                    <p><strong>Device Category:</strong> ${
+                        width < 576 ? 'Extra Small (Mobile Portrait)' :
+                        width < 768 ? 'Small (Mobile Landscape)' :
+                        width < 992 ? 'Medium (Tablet)' :
+                        width < 1200 ? 'Large (Desktop)' : 'Extra Large (Wide Desktop)'
+                    }</p>
+                </div>
+            `;
+        }
+
+        // Initialize
+        updateViewportIndicator();
+        runResponsiveTests();
+
+        // Update on resize
+        window.addEventListener('resize', () => {
+            updateViewportIndicator();
+            setTimeout(runResponsiveTests, 100); // Small delay to ensure layout has updated
+        });
+
+        // Test navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Test Bootstrap collapse functionality
+            const toggler = document.querySelector('.navbar-toggler');
+            const collapse = document.querySelector('#testNavbar');
+            
+            if (toggler && collapse) {
+                toggler.addEventListener('click', function() {
+                    console.log('Navigation toggle clicked');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

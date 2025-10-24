@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross-Page Functionality Validation Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .test-item {
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 4px solid #007bff;
+            background-color: #f8f9fa;
+        }
+        .pass { border-left-color: #28a745; background-color: #d4edda; }
+        .fail { border-left-color: #dc3545; background-color: #f8d7da; }
+        .warning { border-left-color: #ffc107; background-color: #fff3cd; }
+        .test-link {
+            display: inline-block;
+            margin: 5px 10px 5px 0;
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .test-link:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+        h1 { color: #333; text-align: center; }
+        h2 { color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
+        .status { font-weight: bold; }
+        .pass .status { color: #28a745; }
+        .fail .status { color: #dc3545; }
+        .warning .status { color: #856404; }
+        .summary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="summary">
+        <h1>Cross-Page Functionality Validation Test</h1>
+        <p>Comprehensive testing of navigation flow, Bootstrap JavaScript, and asset integrity across all pages</p>
+        <p><strong>Test Date:</strong> <span id="testDate"></span></p>
+    </div>
+
+    <div class="test-section">
+        <h2>1. Navigation Flow Testing</h2>
+        <p>Test all navigation links between pages to ensure proper routing and active states.</p>
+        
+        <div class="test-item">
+            <strong>Home Page Navigation:</strong>
+            <a href="index.html" class="test-link" target="_blank">Test Home Page</a>
+            <div>Expected: Navigation menu with "Home" marked as active, all links functional</div>
+        </div>
+
+        <div class="test-item">
+            <strong>Packages Page Navigation:</strong>
+            <a href="packages.html" class="test-link" target="_blank">Test Packages Page</a>
+            <div>Expected: Navigation menu with "Packages" marked as active, all links functional</div>
+        </div>
+
+        <div class="test-item">
+            <strong>About Page Navigation:</strong>
+            <a href="about.html" class="test-link" target="_blank">Test About Page</a>
+            <div>Expected: Navigation menu with "About" marked as active, all links functional</div>
+        </div>
+
+        <div class="test-item">
+            <strong>Logo Navigation Test:</strong>
+            <div>Test logo clicks from each page return to home:</div>
+            <a href="packages.html" class="test-link" target="_blank">From Packages</a>
+            <a href="about.html" class="test-link" target="_blank">From About</a>
+            <div>Expected: Logo click navigates to index.html from any page</div>
+        </div>
+
+        <div class="test-item">
+            <strong>Learn More Button Navigation:</strong>
+            <a href="index.html#offer_section" class="test-link" target="_blank">Test Learn More Buttons</a>
+            <div>Expected: All "Learn More" buttons in services section redirect to packages.html</div>
+        </div>
+
+        <div class="test-item">
+            <strong>Contact Link Navigation:</strong>
+            <div>Test contact links from different pages:</div>
+            <a href="index.html#contact" class="test-link" target="_blank">From Home</a>
+            <a href="packages.html" class="test-link" target="_blank">From Packages (should go to home#contact)</a>
+            <a href="about.html" class="test-link" target="_blank">From About (should go to home#contact)</a>
+            <div>Expected: Contact links navigate to appropriate contact sections</div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>2. Bootstrap JavaScript Functionality</h2>
+        <p>Verify Bootstrap components work correctly across all pages.</p>
+
+        <div class="test-item">
+            <strong>Mobile Navigation Toggle:</strong>
+            <div>Test hamburger menu on mobile/small screens:</div>
+            <a href="index.html" class="test-link" target="_blank">Home Mobile Nav</a>
+            <a href="packages.html" class="test-link" target="_blank">Packages Mobile Nav</a>
+            <a href="about.html" class="test-link" target="_blank">About Mobile Nav</a>
+            <div>Expected: Hamburger menu toggles navigation on small screens</div>
+            <div><em>Manual Test: Resize browser window to &lt;992px and test toggle functionality</em></div>
+        </div>
+
+        <div class="test-item">
+            <strong>Bootstrap CSS Loading:</strong>
+            <div>Verify Bootstrap styles are applied consistently:</div>
+            <div>Expected: Consistent navbar, grid system, and utility classes across all pages</div>
+        </div>
+
+        <div class="test-item">
+            <strong>Bootstrap JavaScript Loading:</strong>
+            <div>Check for JavaScript errors in browser console:</div>
+            <div>Expected: No Bootstrap-related JavaScript errors on any page</div>
+            <div><em>Manual Test: Open browser developer tools and check console for errors</em></div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>3. Asset Integrity Check</h2>
+        <p>Verify all assets (images, CSS, JavaScript) load correctly on all pages.</p>
+
+        <div class="test-item">
+            <strong>CSS File Loading:</strong>
+            <div>Check style.css loads on all pages:</div>
+            <a href="index.html" class="test-link" target="_blank">Home CSS</a>
+            <a href="packages.html" class="test-link" target="_blank">Packages CSS</a>
+            <a href="about.html" class="test-link" target="_blank">About CSS</a>
+            <div>Expected: Custom styles applied consistently across all pages</div>
+        </div>
+
+        <div class="test-item">
+            <strong>Logo Image Loading:</strong>
+            <div>Verify wan_mei_logo.jpeg loads in navigation:</div>
+            <div>Expected: Logo image displays in navigation on all pages</div>
+        </div>
+
+        <div class="test-item">
+            <strong>Service Images Loading:</strong>
+            <div>Check service-related images load correctly:</div>
+            <div>• car_hire.jpg (packages page)</div>
+            <div>• safari_tours.jpg (packages page)</div>
+            <div>• hotel_booking.jpg (packages page)</div>
+            <div>• nairobi.jpg (home, packages, about pages)</div>
+            <div>• kenya_map.jpg (home, about pages)</div>
+            <div>Expected: All images load without broken image icons</div>
+        </div>
+
+        <div class="test-item">
+            <strong>Favicon Loading:</strong>
+            <div>Check favicon displays in browser tab:</div>
+            <div>Expected: favicon.ico loads and displays in browser tab for all pages</div>
+        </div>
+
+        <div class="test-item">
+            <strong>Google Fonts Loading:</strong>
+            <div>Verify Cardo font family loads:</div>
+            <div>Expected: Cardo font applied to text content across all pages</div>
+        </div>
+
+        <div class="test-item">
+            <strong>External CDN Resources:</strong>
+            <div>Check Bootstrap and other CDN resources load:</div>
+            <div>• Bootstrap CSS (5.3.7)</div>
+            <div>• Bootstrap JavaScript (5.3.7)</div>
+            <div>• Popper.js (2.11.8)</div>
+            <div>Expected: All external resources load successfully</div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>4. Responsive Design Validation</h2>
+        <p>Test responsive behavior across different screen sizes.</p>
+
+        <div class="test-item">
+            <strong>Mobile Responsiveness (< 768px):</strong>
+            <div>Test mobile layout on all pages:</div>
+            <a href="index.html" class="test-link" target="_blank">Home Mobile</a>
+            <a href="packages.html" class="test-link" target="_blank">Packages Mobile</a>
+            <a href="about.html" class="test-link" target="_blank">About Mobile</a>
+            <div>Expected: Content stacks vertically, navigation collapses to hamburger menu</div>
+        </div>
+
+        <div class="test-item">
+            <strong>Tablet Responsiveness (768px - 991px):</strong>
+            <div>Test tablet layout on all pages:</div>
+            <div>Expected: Appropriate column layouts, readable text, functional navigation</div>
+        </div>
+
+        <div class="test-item">
+            <strong>Desktop Responsiveness (≥ 992px):</strong>
+            <div>Test desktop layout on all pages:</div>
+            <div>Expected: Full horizontal navigation, multi-column layouts, optimal spacing</div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>5. Content Consistency Check</h2>
+        <p>Verify consistent content and styling across pages.</p>
+
+        <div class="test-item">
+            <strong>Header Consistency:</strong>
+            <div>Check navigation structure is identical across pages:</div>
+            <div>Expected: Same logo, navigation items, and styling on all pages</div>
+        </div>
+
+        <div class="test-item">
+            <strong>Footer Consistency:</strong>
+            <div>Verify footer content and styling match across pages:</div>
+            <div>Expected: Identical footer structure, contact info, and styling</div>
+        </div>
+
+        <div class="test-item">
+            <strong>Typography Consistency:</strong>
+            <div>Check font families and text styling are consistent:</div>
+            <div>Expected: Cardo font family used consistently, matching heading and text styles</div>
+        </div>
+
+        <div class="test-item">
+            <strong>Color Scheme Consistency:</strong>
+            <div>Verify color palette matches across pages:</div>
+            <div>Expected: Consistent use of brand colors (#f6d7a2, orange accents, dark blue footer)</div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>6. Performance and Loading</h2>
+        <p>Check page loading performance and resource optimization.</p>
+
+        <div class="test-item">
+            <strong>Page Load Speed:</strong>
+            <div>Monitor loading times for each page:</div>
+            <div>Expected: Pages load within reasonable time (< 3 seconds on normal connection)</div>
+            <div><em>Manual Test: Use browser developer tools Network tab to monitor load times</em></div>
+        </div>
+
+        <div class="test-item">
+            <strong>Image Optimization:</strong>
+            <div>Check image file sizes and loading:</div>
+            <div>Expected: Images load progressively, appropriate file sizes for web</div>
+        </div>
+    </div>
+
+    <script>
+        // Set current date
+        document.getElementById('testDate').textContent = new Date().toLocaleDateString();
+
+        // Add click handlers for automated checks where possible
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Cross-page functionality validation test loaded');
+            console.log('Manual testing required for most validation items');
+            
+            // Check if we can access the pages (basic connectivity test)
+            const testPages = ['index.html', 'packages.html', 'about.html'];
+            testPages.forEach(page => {
+                fetch(page, { method: 'HEAD' })
+                    .then(response => {
+                        if (response.ok) {
+                            console.log(`✓ ${page} is accessible`);
+                        } else {
+                            console.log(`✗ ${page} returned status: ${response.status}`);
+                        }
+                    })
+                    .catch(error => {
+                        console.log(`✗ Error accessing ${page}:`, error);
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
