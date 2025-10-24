@@ -1240,6 +1240,39 @@ round pattern for packages content */
   -moz-box-shadow: 0px 1px 5px 4px rgba(0,0,0,0.33);
 }
 
+/* Additional responsive fixes for home page */
+@media (max-width: 991px) {
+  .location_container .row {
+    text-align: center;
+  }
+  
+  .contact_container .row {
+    text-align: center;
+  }
+  
+  .offer_container .card-offer {
+    margin: 0 auto 20px auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .location_container .col-lg-4,
+  .location_container .col-lg-8,
+  .contact_container .col-lg-4,
+  .contact_container .col-lg-8 {
+    margin-bottom: 20px;
+  }
+  
+  .offer_container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .location_container h1 {
+    font-size: 2rem;
+  }
+}
+
 /* Responsive design for about page */
 @media (max-width: 768px) {
   .about-hero .text-overlay {
@@ -1332,7 +1365,7 @@ round pattern for packages content */
 
 /* Responsive design for home page offer cards */
 @media (max-width: 1200px) {
-  .offer_container > .offer-row {
+  .offer_container > .container > .offer-row {
     flex-direction: column;
     align-items: center;
     height: auto;
@@ -1340,8 +1373,8 @@ round pattern for packages content */
     padding: 20px;
   }
   
-  .offer_container > .offer-row > .card-offer {
-    width: 80% !important;
+  .offer_container .card-offer {
+    width: 100% !important;
     margin-bottom: 20px;
     height: 300px;
   }
@@ -1354,8 +1387,8 @@ round pattern for packages content */
 }
 
 @media (max-width: 768px) {
-  .offer_container > .offer-row > .card-offer {
-    width: 95% !important;
+  .offer_container .card-offer {
+    width: 100% !important;
     height: 250px;
   }
   
@@ -1364,23 +1397,34 @@ round pattern for packages content */
   }
   
   .location_container {
-    flex-direction: column;
     padding: 40px 20px;
     text-align: center;
   }
   
-  .location_container > img {
+  .location_container .container .row {
+    flex-direction: column;
+  }
+  
+  .location_container img {
     width: 80% !important;
     margin-bottom: 20px;
   }
   
-  .location_container > div {
-    width: 100% !important;
+  .introduction .container .row .col-12 p {
+    width: 95%;
+    padding: 15px;
+    font-size: 1rem;
+  }
+  
+  .car-container .container .row .col-12 > div {
+    width: 95%;
+    padding: 15px;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .offer_container > .offer-row > .card-offer {
+  .offer_container .card-offer {
     width: 100% !important;
     height: 200px;
   }
@@ -1395,14 +1439,14 @@ round pattern for packages content */
     font-size: 2rem;
   }
   
-  .location_container > div > h1,
-  .contact_container > h1 {
+  .location_container h1,
+  .contact_container h1 {
     font-size: 2.5rem;
   }
   
-  .introduction > p,
-  .car-container > .box_shadow_effect {
-    width: 95%;
+  .introduction .container p,
+  .car-container .container .box_shadow_effect {
+    width: 100%;
     padding: 15px;
     font-size: 1rem;
   }
