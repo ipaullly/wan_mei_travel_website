@@ -183,8 +183,13 @@ html, body {
 }
 
 .socials_container > .card-btn {
-  color: black;
+  color: white;
 }
+
+.offer_container > .offer-row > .card-offer > .card-btn {
+  text-decoration: none;
+}
+
 .offer_container > .offer-row > .card-offer > .card-btn:hover,
 .contact_container > .card-btn:hover,
 .socials_container > .card-btn:hover {
