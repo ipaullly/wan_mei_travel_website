@@ -56,6 +56,64 @@ html, body {
   margin-right: -40px;
 }
 
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+  .slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .slider::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+
+  .slider img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 400px;
+    object-fit: cover; /* Keep aspect ratio */
+    transition: transform 0.3s ease;
+  }
+
+  .slider img:hover {
+    transform: scale(1.02);
+  }
+
+  /* Arrow buttons */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 28px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+  }
+
+  .arrow:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .left {
+    left: 15px;
+  }
+
+  .right {
+    right: 15px;
+  }
 .introduction {
   background-color: #f6d7a2;
   position: relative;
@@ -251,11 +309,14 @@ html, body {
 .parallax-container,
 .offer_container,
 .location_container,
-.contact_container,
-.socials_container {
+.contact_container {
   position: relative;
   height: 100vh; 
   overflow: hidden;
+}
+
+.socials_container {
+  height: 50vh;
 }
 
 /* .background-image {
@@ -841,6 +902,13 @@ round pattern for packages content */
   font-size: 2.5rem;
 }
 
+.company-intro img {
+  width: 90%;
+  height: auto;
+  background-size: contain;
+  margin: 40px auto;
+}
+
 .company-intro .lead {
   color: orange;
   font-weight: 700;
@@ -1238,8 +1306,23 @@ round pattern for packages content */
   margin-top: auto;
 }
 
+.page-packages .background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./images/lion_cubs.jpeg');
+  background-position: center;
+  background-size: cover;
+  padding: 50px;
+  background-attachment: fixed;
+  z-index: -3;
+  opacity: 0;
+  animation: fadeZoom 4s ease-in-out forwards;
+}
+
 /* Ensure existing parallax and animation effects work on all pages */
-.page-packages .background-image,
 .page-about .background-image {
   position: fixed;
   top: 0;
