@@ -18,7 +18,29 @@
           <img src="./wan_mei_logo.jpeg" class="rounded float-start nav_logo" width="80px" alt="...">
           <span>Wan Mei</span>
         </a>
-        <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- Hidden checkbox to toggle menu -->
+        <input type="checkbox" id="menu-checkbox">
+
+        <!-- Hamburger icon -->
+        <label for="menu-checkbox" class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <!-- Nav links -->
+        <ul class="nav-links">
+          <li>
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li>
+            <a class="nav-link" href="packages.html">Packages</a>
+          </li>
+          <li>
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+        <!-- <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse float-end d-flex flex-row-reverse" id="navbarNavDropdown">
@@ -33,7 +55,7 @@
               <a class="nav-link" href="about.html">About</a>
             </li>
           </ul>
-        </div>
+        </div> -->
       </div>
     </nav>
 
@@ -174,7 +196,7 @@
     </main>
 
     <footer class="d-flex flex-column align-items-center justify-content-around footer_style">
-      <div class="d-flex flex-row justify-content-around align-items-start w-75">
+      <div class="d-flex flex-row justify-content-around align-items-center w-75">
         <div class="footer_col">
           <span>GET IN TOUCH</span>
           <p>Email: wanmeitours@gmail.com</p>
