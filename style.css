@@ -175,7 +175,7 @@ html, body {
     border: none;
     color: white;
     font-size: 28px;
-    padding: 10px;
+    padding: 10px 20px;
     cursor: pointer;
     border-radius: 50%;
     z-index: 10;
@@ -466,7 +466,16 @@ html, body {
 .footer_col {
   display: flex;
   flex-direction: column;
+}
 
+.footer_col > a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer_col > a:hover {
+  color: #ff9800;
 }
 
 .footer_col > span {
@@ -1132,6 +1141,10 @@ round pattern for packages content */
   font-size: 2.2rem;
 }
 
+.contact-info a {
+  text-decoration: none;
+}
+
 .contact-info h5 {
   color: orange;
   font-weight: 700;
@@ -1586,14 +1599,14 @@ round pattern for packages content */
   
   .offer_container {
     padding: 40px 20px;
-    height: 140vh;
+    height: 190vh;
     margin-top: 140px;
   }
   
   .location_container {
     padding: 40px 20px;
     text-align: center;
-    height: 130vh;
+    height: 180vh;
   }
   
   .location_container .container .row {
