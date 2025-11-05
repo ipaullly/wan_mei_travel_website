@@ -134,7 +134,7 @@
                 </div>
               </div>
               <div class="col-md-6 order-md-2">
-                <img src="./images/safari_tours.jpg" class="img-fluid rounded box_shadow_effect" alt="Safari Tours">
+                <img src="./images/buffalo_two.jpeg" class="img-fluid rounded box_shadow_effect" alt="Safari Tours">
               </div>
             </div>
           </div>
@@ -160,7 +160,7 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <img src="./images/nairobi.jpg" class="img-fluid rounded box_shadow_effect" alt="Transfer Services">
+                <img src="./images/lion_alpha.jpeg" class="img-fluid rounded box_shadow_effect" alt="Transfer Services">
               </div>
             </div>
           </div>
@@ -232,6 +232,30 @@
           behavior: "smooth"
         });
       }
+    </script>
+    <script>
+      const images = [
+        './images/lion_cubs.jpeg',
+        './images/elephants.jpeg',
+        './images/cheetahs.jpeg',
+        './images/lion_alpha.jpeg',
+        './images/lion_yawning.jpeg',
+        './images/lions_sleeping.jpeg'
+      ];
+
+      let index = 0;
+      const bg = document.querySelector('.background-image');
+
+      function changeBackground() {
+        bg.style.backgroundImage = `url('${images[index]}')`;
+        index = (index + 1) % images.length;
+      }
+
+      // initial load
+      changeBackground();
+      // change every 3 seconds
+      setInterval(changeBackground, 5000);
+
     </script>
   </body>
 </html>

@@ -247,5 +247,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1ERo0BZlK" crossorigin="anonymous"></script>
+    <script>
+      const images = [
+        './images/bluebird.jpeg',
+        './images/wildebeest.jpeg',
+        './images/ostrich.jpeg',
+        './images/mating_lions.jpeg',
+        './images/kingfisher.jpeg'
+      ];
+
+      let index = 0;
+      const bg = document.querySelector('.background-image');
+
+      function changeBackground() {
+        bg.style.backgroundImage = `url('${images[index]}')`;
+        index = (index + 1) % images.length;
+      }
+
+      // initial load
+      changeBackground();
+      // change every 3 seconds
+      setInterval(changeBackground, 5000);
+
+    </script>
   </body>
 </html>
